@@ -30,7 +30,9 @@ import html
 # -----------------------------
 # BOT CONFIG
 # -----------------------------
-TOKEN = "Token"
+import os
+
+TOKEN = os.getenv("BOT_TOKEN")
 CHANNEL_USERNAME = "@the_english_map"
 
 bot = Bot(token=TOKEN)
@@ -353,4 +355,5 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
+
     asyncio.run(main())
